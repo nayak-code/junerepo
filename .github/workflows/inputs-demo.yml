@@ -7,7 +7,7 @@ on:
        required: true
        default: dev
 jobs: 
-  inputs_demo:
+  inputs-demo:
     runs-on: ubuntu:latest
     steps:
       - name: Deploy the app
