@@ -1,0 +1,14 @@
+name: Deploy HTML to s3
+on: push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Checkout code from repo
+       uses: actions/checkout@v4
+     - name: Configure AWS credentials
+       uses: aws-actions/configure-aws-credentials@v4
+       with:
+         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+         aws_secret_access_key: ${{ serets.AWS_SECRET_ACCESS_KEY }}
+         aws_region: us-east-1
