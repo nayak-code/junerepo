@@ -1,0 +1,16 @@
+name: if Demo
+on:
+   push:
+    branches: 
+       - master
+       - devlopment
+job:
+ demo:
+  runs-on: ubuntu-latest
+  steps:
+     - name: Run if branch is master
+       if: github.ref == 'refs/heads/master'
+       run: echo "Running for master branch"
+     - name: Run this step after if statement
+       run: echo "Running this step"
+     
