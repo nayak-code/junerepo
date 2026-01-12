@@ -1,0 +1,9 @@
+name: Or demo
+on: push
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run for nayak or nayak-code
+        if: github.actor == 'nayak' || github.actor == 'nayak-code'
+        run: echo "It si triggered by either nayak or nayak-code"
