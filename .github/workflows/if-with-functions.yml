@@ -14,7 +14,7 @@ jobs:
           run: echo "Running quality checks on feature branch"
     dev_deploy:
       if: github.ref_name == 'develop' && github.event_name == 'push'
-      runs_on: ubuntu-latest
+      runs-on: ubuntu-latest
       steps:
         - name: Deploy to development environment
           run: echo "Deploying to development environment"
